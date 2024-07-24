@@ -15,4 +15,4 @@ endif()
 add_executable(hello src/main.cpp)
 
 # Specify the install directory
-install(TARGETS hello DESTINATION bin)
+install(TARGETS hello DESTINATION bin/${PROJECT_NAME})

@@ -24,11 +24,5 @@
     },
     "remoteUser": "vscode",
     "workspaceFolder": "/workspace",
-    "workspaceMount": "source=${localWorkspaceFolder}/src,target=/workspace/src,type=bind",
-    "mounts": [
-        "source=${localWorkspaceFolder}/CMakeLists.txt,target=/workspace/CMakeLists.txt,type=bind",
-        "source=${localWorkspaceFolder}/.clang-format,target=/workspace/.clang-format,type=bind",
-        "source=${localWorkspaceFolder}/.gitignore,target=/workspace/.gitignore,type=bind",
-        "source=${localWorkspaceFolder}/build.bash,target=/workspace/build.bash,type=bind"
-    ]
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"
 }
