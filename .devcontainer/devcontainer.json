@@ -1,0 +1,34 @@
+{
+    "name": "C++ Development Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USERNAME": "vscode"
+        },
+        "context": "${localWorkspaceFolder}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools-themes",
+                "ms-vscode.cpptools",
+                "streetsidesoftware.code-spell-checker",
+                "twxs.cmake",
+                "yzhang.markdown-all-in-one"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    },
+    "remoteUser": "vscode",
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder}/src,target=/workspace/src,type=bind",
+    "mounts": [
+        "source=${localWorkspaceFolder}/CMakeLists.txt,target=/workspace/CMakeLists.txt,type=bind",
+        "source=${localWorkspaceFolder}/.clang-format,target=/workspace/.clang-format,type=bind",
+        "source=${localWorkspaceFolder}/.gitignore,target=/workspace/.gitignore,type=bind",
+        "source=${localWorkspaceFolder}/build.bash,target=/workspace/build.bash,type=bind"
+    ]
+}
